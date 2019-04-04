@@ -16,8 +16,8 @@ Extended sets of props for use with [Styled System].
 ## Usage
 
 ```js
-import { system } from 'system-prop-sets'
-import { styled, typography } from '@emotion/styled'
+import styled from '@emotion/styled'
+import { system, typography } from 'system-prop-sets'
 
 export const Box = styled.div(system)
 
