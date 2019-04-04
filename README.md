@@ -1,47 +1,31 @@
-# prop sets for [`@rebass/components`]
+# `system-prop-sets`
 
-Sets of props for use with [`@rebass/components`] (and [`styled-system`]).
+Extended sets of props for use with [Styled System].
+
+## Exports
+
+* `system` — everything
+* `layout`
+* `skin`
+* `typography`
+* `positioning`
+* `grid`
+* `flexbox`
+* `backgrounds`
 
 ## Usage
 
 ```js
-import system from '@rebass/components'
-import all from 'system-prop-sets'
+import { system } from 'system-prop-sets'
+import { styled, typography } from '@emotion/styled'
 
-// creates a Box component with all props
-const Box = system({ is: 'div'}, ...all)
+export const Box = styled.div(system)
 
-// creates a Button with select props
-const Button = system({ 
-    is: 'button',
-    color: 'orange',
-  },
-  ...background,
-  ...typography,
-  ...border,
-)
+export const Text = styled.span(typography)
 ```
-
-## Available sets
-
-* **`all`** – default export
-* **`core`** – `color`, `space`, `width`, `fontSize`
-* **`typography`** – `textColor`, `textAlign`, `verticalAlign`, `fontSize`, `fontFamily`, `fontWeight`, `fontStyle`, `letterSpacing`, `lineHeight`
-* **`background`** – `bgColor`, `background`, `backgroundImage`, `backgroundPosition`, `backgroundRepeat`, `backgroundSize`
-* **`border`** – `borders`, `borderColor`, `borderRadius`
-* **`dimension`** – `space`, `maxWidth`, `minWidth`, `width`, `height`, `maxHeight`, `minHeight`, `sizeWidth`, `sizeHeight`, `size`
-* **`layout`** – `display`, `position`, `top`, `right`, `bottom`, `left`, `zIndex`
-* **`flexbox`** – `alignItems`, `alignContent`, `justifyContent`, `flexWrap`, `flexDirection`, `flex`, `flexBasis`, `justifySelf`, `alignSelf`, `order`
-* **`grid`** – `gridGap`, `gridColumnGap`, `gridRowGap`, `gridColumn`, `gridRow`, `gridAutoFlow`, `gridAutoColumns`, `gridAutoRows`, `gridTemplateColumns`, `gridTemplateRows`, `gridTemplateAreas`, `gridArea`
-* **`variant`** –
-
-## Inspiration
-
-All of the work [Brent Jackson](https://github.com/jxnblk) and [Adam Morse](https://github.com/mrmrs) have done over the years, as well as [Varun Vachhar](https://github.com/winkerVSbecks)’s wonderful article ["Component Based Design System With Styled-System"](https://varun.ca/styled-system/) which introduced me to `styled-system-components` (now [`@rebass/components`])
-
-[`@rebass/components`]: https://github.com/rebassjs/components
-[`styled-system`]: https://github.com/jxnblk/styled-system
 
 ## Contributing
 
 Feedback and optimizations welcome.
+
+[Styled System]: https://styled-system.com
