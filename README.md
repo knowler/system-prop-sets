@@ -2,6 +2,10 @@
 
 Extended sets of props for use with [Styled System].
 
+```shell
+npm i system-prop-sets
+```
+
 ## Exports
 
 * `system` — everything
